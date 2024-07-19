@@ -5,6 +5,9 @@ Her finner du prosjektet vårt.
 ## GitHub-regler:
 
 
+### Hva er "tags"?
+Tags brukes for å gjøre det enklere for alle å skjønne hva du ønsker å committe/merge. Å legge til tags hjelper med å skjønne konteksten til det som lastes opp på GitHub. 
+
 
 ## Hvem er vi?
 Vi er tre programmeringsenthusiaster som ønsket å utføre et hobbyprosjekt med kunnskapen vi har fra utdanningen vår. Målet var å bruke kunnskapene vi hadde fra før til å lage en spennende applikasjon - ... . Utfordringen for oss var å 
