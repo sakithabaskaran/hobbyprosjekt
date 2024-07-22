@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		01860FAF2C482FF9004B1EAD /* hobbyprosjektApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01860FAE2C482FF9004B1EAD /* hobbyprosjektApp.swift */; };
 		01860FB12C482FF9004B1EAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01860FB02C482FF9004B1EAD /* ContentView.swift */; };
-		01860FB32C482FF9004B1EAD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01860FB22C482FF9004B1EAD /* Item.swift */; };
 		01860FB52C482FFB004B1EAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01860FB42C482FFB004B1EAD /* Assets.xcassets */; };
 		01860FB82C482FFB004B1EAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01860FB72C482FFB004B1EAD /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -18,7 +17,6 @@
 		01860FAB2C482FF9004B1EAD /* hobbyprosjekt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hobbyprosjekt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01860FAE2C482FF9004B1EAD /* hobbyprosjektApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hobbyprosjektApp.swift; sourceTree = "<group>"; };
 		01860FB02C482FF9004B1EAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		01860FB22C482FF9004B1EAD /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		01860FB42C482FFB004B1EAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01860FB72C482FFB004B1EAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,9 +51,11 @@
 		01860FAD2C482FF9004B1EAD /* hobbyprosjekt */ = {
 			isa = PBXGroup;
 			children = (
+				01860FBE2C4EDE6C004B1EAD /* Model */,
+				01860FC02C4EDE8B004B1EAD /* View */,
+				01860FC12C4EDE9F004B1EAD /* Controller */,
 				01860FAE2C482FF9004B1EAD /* hobbyprosjektApp.swift */,
 				01860FB02C482FF9004B1EAD /* ContentView.swift */,
-				01860FB22C482FF9004B1EAD /* Item.swift */,
 				01860FB42C482FFB004B1EAD /* Assets.xcassets */,
 				01860FB62C482FFB004B1EAD /* Preview Content */,
 			);
@@ -68,6 +68,27 @@
 				01860FB72C482FFB004B1EAD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		01860FBE2C4EDE6C004B1EAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		01860FC02C4EDE8B004B1EAD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01860FC12C4EDE9F004B1EAD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +162,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				01860FB12C482FF9004B1EAD /* ContentView.swift in Sources */,
-				01860FB32C482FF9004B1EAD /* Item.swift in Sources */,
 				01860FAF2C482FF9004B1EAD /* hobbyprosjektApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

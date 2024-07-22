@@ -4,6 +4,14 @@ Her finner du prosjektet vårt.
 
 ## GitHub-regler:
 
+### Beste praksis for git branching: Git Flow
+Sørg for å jobbe strukturert for hver commit som utføres. Ved utgrening fra master, er det ønskelig å ha denne type struktur:
+
+- feat/number-name_of_feature: dersom det utvikles en feature. 
+- fix/number-what_to_fix: det som skal fikses av kode før det merges tilbake til main.
+- test/number-test_description: dersom noe skal testes.
+
+OBS! Det er alltid viktig at main har et kjørende program med minst mulig feil.
 
 ### Hva er "tags"?
 Tags brukes for å gjøre det enklere for alle å skjønne hva du ønsker å committe/merge. Å legge til tags hjelper med å skjønne konteksten til det som lastes opp på GitHub. 
