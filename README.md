@@ -12,6 +12,7 @@ Sørg for å jobbe strukturert for hver commit som utføres. Ved utgrening fra m
 - test/number-test_description: dersom noe skal testes.
 
 OBS! Det er alltid viktig at main har et kjørende program med minst mulig feil.
+NB! Husk å alltid PULL fra siste branch FØR du setter i gang med å kode!
 
 ### Hva er "tags"?
 Tags brukes for å gjøre det enklere for alle å skjønne hva du ønsker å committe/merge. Å legge til tags hjelper med å skjønne konteksten til det som lastes opp på GitHub. 
