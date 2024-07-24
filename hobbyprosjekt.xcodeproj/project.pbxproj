@@ -12,6 +12,8 @@
 		01860FB52C482FFB004B1EAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01860FB42C482FFB004B1EAD /* Assets.xcassets */; };
 		01860FB82C482FFB004B1EAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01860FB72C482FFB004B1EAD /* Preview Assets.xcassets */; };
 		01860FC82C51469B004B1EAD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01860FC72C51469B004B1EAD /* Constants.swift */; };
+		01860FCA2C514B42004B1EAD /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01860FC92C514B41004B1EAD /* Countries.swift */; };
+		01860FCE2C515A57004B1EAD /* RESTCountries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01860FCD2C515A56004B1EAD /* RESTCountries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		01860FB42C482FFB004B1EAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01860FB72C482FFB004B1EAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		01860FC72C51469B004B1EAD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		01860FC92C514B41004B1EAD /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
+		01860FCD2C515A56004B1EAD /* RESTCountries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTCountries.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		01860FBE2C4EDE6C004B1EAD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				01860FC92C514B41004B1EAD /* Countries.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,6 +103,7 @@
 		01860FC42C5143B7004B1EAD /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				01860FCD2C515A56004B1EAD /* RESTCountries.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -188,8 +194,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01860FCE2C515A57004B1EAD /* RESTCountries.swift in Sources */,
 				01860FB12C482FF9004B1EAD /* ContentView.swift in Sources */,
 				01860FAF2C482FF9004B1EAD /* hobbyprosjektApp.swift in Sources */,
+				01860FCA2C514B42004B1EAD /* Countries.swift in Sources */,
 				01860FC82C51469B004B1EAD /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
