@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct Constants {
+    
+    static let scheme = "https"
+    static let baseURL = "restcountries.com/v3.1"
+    static let port: Int? = nil
+    static let fullURL = "https://restcountries.com/v3.1/all"
+}
