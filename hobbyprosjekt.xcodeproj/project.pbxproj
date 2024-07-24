@@ -53,7 +53,7 @@
 			children = (
 				01860FBE2C4EDE6C004B1EAD /* Model */,
 				01860FC02C4EDE8B004B1EAD /* View */,
-				01860FC12C4EDE9F004B1EAD /* Controller */,
+				01860FC32C5139FE004B1EAD /* ViewModel */,
 				01860FAE2C482FF9004B1EAD /* hobbyprosjektApp.swift */,
 				01860FB02C482FF9004B1EAD /* ContentView.swift */,
 				01860FB42C482FFB004B1EAD /* Assets.xcassets */,
@@ -84,11 +84,11 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		01860FC12C4EDE9F004B1EAD /* Controller */ = {
+		01860FC32C5139FE004B1EAD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Controller;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
