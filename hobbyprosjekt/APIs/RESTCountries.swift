@@ -7,20 +7,44 @@
 
 import Foundation
 
-func fetchData() async {
-    // oppretter URL-en
-    guard let url = URL(string: Constants.fullURL) else {
-        print("Denne URL-en er ikke tilgjengelig!")
+func downloadCountries(completion: @escaping ([Countries]) -> Void) {
+    let urlString = "https://restcountries.com/v3.1/all"
+    
+    
+    guard let url = URL(string: urlString) else {
+        print("Error: Could not create URL from string.")
         return
     }
     
-    // fetch data fra lenken
-    /*
-    do {
-        let (data, _) = try await URLSession.shared.data(from: url)
+    let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        if let error = error {
+            print("Error found: \(error.localizedDescription)")
+            return
+        }
         
-        if let decodedResponse = try? JSONDecoder().decode(type: Decodable.Protocol, from: Data)
-    } catch {
-        print("Snatchet før du fetchet")
-    }*/
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            print("Invalid response!")
+            return
+        }
+        
+        guard let data = data else {
+            print("No data received")
+            return
+        }
+        
+        do {
+            let countries = try JSONDecoder().decode([Countries].self, from: data)
+            DispatchQueue.main.async {
+                completion(countries)
+            }
+            // print("Fetched countries: \(countries)")
+        } catch {
+            print("Decoding error: \(error.localizedDescription)")
+        }
+    }
+    
+    task.resume()
 }
+
+
+

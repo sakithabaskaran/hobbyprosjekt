@@ -1,27 +1,26 @@
+// This file was generated from JSON Schema using codebeautify, do not modify it directly.
+// To parse the JSON, add this file to your project and do:
 //
-//  Countries.swift
-//  hobbyprosjekt
-//
-//  Created by Sakitha Baskaran on 24/07/2024.
-//
+//   let welcome7 = try Welcome7(json)
 
 import Foundation
 
 // MARK: - Countries
-struct Countries {
+struct Countries: Codable, Identifiable {
+    var id: UUID = UUID()
     let name: Name
     let tld: [String]?
     let cca2: String
-    let ccn3: String?
+    let ccn3: String
     let cca3: String
     let independent: Bool?
-    let status: Status
+    let status: String
     let unMember: Bool
-    let currencies: [String: Currency]?
+    let currencies: Currencies
     let idd: Idd
     let capital: [String]?
     let altSpellings: [String]
-    let region: Region
+    let region: String
     let languages: [String: String]?
     let translations: [String: Translation]
     let latlng: [Double]
@@ -66,7 +65,7 @@ struct CoatOfArms: Codable {
     let svg: String?
 }
 
-enum Continent: Codable {
+enum Continent: String, Codable {
     case africa
     case antarctica
     case asia
@@ -76,8 +75,12 @@ enum Continent: Codable {
     case southAmerica
 }
 
-// MARK: - Currency
-struct Currency: Codable {
+// MARK: - Currencies
+struct Currencies: Codable {
+    let SHP: Shp
+}
+
+struct Shp: Codable {
     let name, symbol: String
 }
 
@@ -101,7 +104,7 @@ struct Flags: Codable {
 
 // MARK: - Idd
 struct Idd: Codable {
-    let root: String?
+    let root: String
     let suffixes: [String]?
 }
 
@@ -113,7 +116,11 @@ struct Maps: Codable {
 // MARK: - Name
 struct Name: Codable {
     let common, official: String
-    let nativeName: [String: Translation]?
+    let nativeName: Eng1
+}
+
+struct Eng1: Codable {
+    let common, official: String
 }
 
 // MARK: - Translation
@@ -140,10 +147,5 @@ enum StartOfWeek: String, Codable {
     case monday
     case saturday
     case sunday
-}
-
-enum Status: String, Codable {
-    case officiallyAssigned
-    case userAssigned
 }
 
