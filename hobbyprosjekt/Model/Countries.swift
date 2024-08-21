@@ -16,7 +16,7 @@ struct Countries: Codable, Identifiable {
     let independent: Bool?
     let status: String
     let unMember: Bool
-    let currencies: Currencies
+    let currencies: [String: Currency]
     let idd: Idd
     let capital: [String]?
     let altSpellings: [String]
@@ -26,18 +26,19 @@ struct Countries: Codable, Identifiable {
     let latlng: [Double]
     let landlocked: Bool
     let area: Double
-    let demonyms: Demonyms?
+    let demonyms: [String: Demonym]
     let flag: String
     let maps: Maps
     let population: Int
+    let fifa: String?
     let car: Car
     let timezones: [String]
     let continents: [Continent]
     let flags: Flags
     let coatOfArms: CoatOfArms
-    let startOfWeek: StartOfWeek
+    let startOfWeek: String
     let capitalInfo: CapitalInfo
-    let cioc, subregion, fifa: String?
+    let cioc, subregion: String?
     let borders: [String]?
     let gini: [String: Double]?
     let postalCode: PostalCode?
@@ -76,16 +77,12 @@ enum Continent: String, Codable {
 }
 
 // MARK: - Currencies
-struct Currencies: Codable {
-    let SHP: Shp
-}
-
-struct Shp: Codable {
+struct Currency: Codable {
     let name, symbol: String
 }
 
 // MARK: - Demonyms
-struct Demonyms: Codable {
+struct Demonym: Codable {
     let eng: Eng
     let fra: Eng?
 }
