@@ -9,24 +9,24 @@ import Foundation
 // MARK: - Country
 struct Country: Hashable, Codable {
     let name: Name
-    let tld: [String]
+    let tld: [String]?
     let cca2: String
-    let ccn3: String
+    let ccn3: String?
     let cca3: String
-    let independent: Bool
+    let independent: Bool?
     let status: Status
     let unMember: Bool
     let currencies: [String: Currency]?
     let idd: Idd
-    let capital: [String]
+    let capital: [String]?
     let altSpellings: [String]
     let region: Region
-    let languages: [String: String]
+    let languages: [String: String]?
     let translations: [String: Translation]
     let latlng: [Double]
     let landlocked: Bool
     let area: Double
-    let demonyms: Demonyms
+    let demonyms: Demonyms?
     let flag: String
     let maps: Maps
     let population: Int
@@ -45,34 +45,34 @@ struct Country: Hashable, Codable {
 
 // MARK: - CapitalInfo
 struct CapitalInfo: Hashable, Codable {
-    let latlng: [Double]
+    let latlng: [Double]?
 }
 
 // MARK: - Car
 struct Car: Hashable, Codable {
-    let signs: [String]
+    let signs: [String]?
     let side: Side
 }
 
 enum Side: String, Hashable, Codable{
-    case left
-    case right
+    case left = "left"
+    case right = "right"
 }
 
 // MARK: - CoatOfArms
 struct CoatOfArms: Hashable, Codable {
-    let png: String
-    let svg: String
+    let png: String?
+    let svg: String?
 }
 
 enum Continent: String, Hashable, Codable {
-    case africa
-    case antarctica
-    case asia
-    case europe
-    case northAmerica
-    case oceania
-    case southAmerica
+    case africa = "Africa"
+    case antarctica = "Antarctica"
+    case asia = "Asia"
+    case europe = "Europe"
+    case northAmerica = "North America"
+    case oceania = "Oceania"
+    case southAmerica = "South America"
 }
 
 // MARK: - Currency
@@ -100,8 +100,8 @@ struct Flags: Hashable, Codable {
 
 // MARK: - Idd
 struct Idd: Hashable, Codable {
-    let root: String
-    let suffixes: [String]
+    let root: String?
+    let suffixes: [String]?
 }
 
 // MARK: - Maps
@@ -127,21 +127,21 @@ struct PostalCode: Hashable, Codable {
 }
 
 enum Region: String, Hashable, Codable {
-    case africa
-    case americas
-    case antarctic
-    case asia
-    case europe
-    case oceania
+    case africa = "Africa"
+    case americas = "Americas"
+    case antarctic = "Antarctic"
+    case asia = "Asia"
+    case europe = "Europe"
+    case oceania = "Oceania"
 }
 
 enum StartOfWeek: String, Hashable, Codable {
-    case monday
-    case saturday
-    case sunday
+    case monday = "monday"
+    case saturday = "saturday"
+    case sunday = "sunday"
 }
 
 enum Status: String, Hashable, Codable {
-    case officiallyAssigned
-    case userAssigned
+    case officiallyAssigned = "officially-assigned"
+    case userAssigned = "user-assigned"
 }
