@@ -7,9 +7,8 @@
 
 import Foundation
 
-func downloadCountries(completion: @escaping ([Countries]) -> Void) {
+/*public*/ func fetch(countriesViewModel: CountriesViewModel) {
     let urlString = "https://restcountries.com/v3.1/all"
-    
     
     guard let url = URL(string: urlString) else {
         print("Error: Could not create URL from string.")
@@ -33,16 +32,16 @@ func downloadCountries(completion: @escaping ([Countries]) -> Void) {
         }
         
         do {
-            let countries = try JSONDecoder().decode([Countries].self, from: data)
+            print("Vi kom oss hit") // FIXME
+            let countries = try JSONDecoder().decode([Country].self, from: data)
             DispatchQueue.main.async {
-                completion(countries)
+                // print("Inni DispatchQueue")
+                countriesViewModel.countries = countries
             }
-            // print("Fetched countries: \(countries)")
         } catch {
             print("Decoding error: \(error.localizedDescription)")
         }
     }
-    
     task.resume()
 }
 

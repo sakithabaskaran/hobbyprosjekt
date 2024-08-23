@@ -9,19 +9,26 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @State private var countries = [Countries]()
+    @StateObject var countriesViewModel = CountriesViewModel()
     
     var body: some View {
         NavigationView {
-            List(countries) { country in
-                Text(country.name.common)
+            List {
+                ForEach(countriesViewModel.countries, id: \.self) { country in
+                    HStack {
+                        Text(country.name.common)
+                    }
+                    .padding(3)
+                }
             }
             .navigationTitle("Land")
-        }
-        .onAppear {
-            downloadCountries { countries in
-                self.countries = countries
+            .onAppear {
+                countriesViewModel.getData()
             }
         }
     }
+}
+
+#Preview {
+    ContentView()
 }

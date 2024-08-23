@@ -3,11 +3,11 @@
 //
 // let countriesJSON = try Countries(json)
 
+import SwiftUI
 import Foundation
 
-// MARK: - Countries
-struct Countries: Decodable, Identifiable {
-    var id: UUID = UUID()
+// MARK: - Country
+struct Country: Hashable, Codable {
     let name: Name
     let tld: [String]
     let cca2: String
@@ -44,28 +44,28 @@ struct Countries: Decodable, Identifiable {
 }
 
 // MARK: - CapitalInfo
-struct CapitalInfo: Decodable {
+struct CapitalInfo: Hashable, Codable {
     let latlng: [Double]
 }
 
 // MARK: - Car
-struct Car: Decodable {
+struct Car: Hashable, Codable {
     let signs: [String]
     let side: Side
 }
 
-enum Side: String, Decodable {
+enum Side: String, Hashable, Codable{
     case left
     case right
 }
 
 // MARK: - CoatOfArms
-struct CoatOfArms: Decodable {
+struct CoatOfArms: Hashable, Codable {
     let png: String
     let svg: String
 }
 
-enum Continent: String, Decodable {
+enum Continent: String, Hashable, Codable {
     case africa
     case antarctica
     case asia
@@ -76,57 +76,57 @@ enum Continent: String, Decodable {
 }
 
 // MARK: - Currency
-struct Currency: Decodable {
+struct Currency: Hashable, Codable {
     let name, symbol: String
 }
 
 // MARK: - Demonyms
-struct Demonyms: Decodable {
+struct Demonyms: Hashable, Codable {
     let eng: Eng
     let fra: Eng?
 }
 
 // MARK: - Eng
-struct Eng: Decodable {
+struct Eng: Hashable, Codable {
     let f, m: String
 }
 
 // MARK: - Flags
-struct Flags: Decodable {
+struct Flags: Hashable, Codable {
     let png: String
     let svg: String
     let alt: String?
 }
 
 // MARK: - Idd
-struct Idd: Decodable {
+struct Idd: Hashable, Codable {
     let root: String
     let suffixes: [String]
 }
 
 // MARK: - Maps
-struct Maps: Decodable {
+struct Maps: Hashable, Codable {
     let googleMaps, openStreetMaps: String
 }
 
 // MARK: - Name
-struct Name: Decodable {
+struct Name: Hashable, Codable {
     let common, official: String
     let nativeName: [String: Translation]?
 }
 
 // MARK: - Translation
-struct Translation: Decodable {
+struct Translation: Hashable, Codable {
     let official, common: String
 }
 
 // MARK: - PostalCode
-struct PostalCode: Decodable {
+struct PostalCode: Hashable, Codable {
     let format: String
     let regex: String?
 }
 
-enum Region: String, Decodable {
+enum Region: String, Hashable, Codable {
     case africa
     case americas
     case antarctic
@@ -135,13 +135,13 @@ enum Region: String, Decodable {
     case oceania
 }
 
-enum StartOfWeek: String, Decodable {
+enum StartOfWeek: String, Hashable, Codable {
     case monday
     case saturday
     case sunday
 }
 
-enum Status: String, Decodable {
+enum Status: String, Hashable, Codable {
     case officiallyAssigned
     case userAssigned
 }
