@@ -17,11 +17,12 @@ struct ContentView: View {
                 ForEach(countriesViewModel.countries, id: \.self) { country in
                     HStack {
                         Text(country.name.common)
+                        Text(country.flag)
                     }
                     .padding(3)
                 }
             }
-            .navigationTitle("Land")
+            .navigationTitle("Countries")
             .onAppear {
                 countriesViewModel.getData()
             }
