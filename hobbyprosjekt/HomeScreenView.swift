@@ -8,28 +8,30 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct HomeScreenView: View {
     @StateObject var countriesViewModel = CountriesViewModel()
+    //@StateObject var listOfCountries = self.CountryList()
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(countriesViewModel.countries, id: \.self) { country in
+                ForEach(countriesViewModel.filterCountries, id: \.self) { country in
                     HStack {
                         Text(country.name.common)
                         Text(country.flag)
                     }
-                    .padding(3)
+                    .padding(3) 
                 }
             }
             .navigationTitle("Countries")
             .onAppear {
                 countriesViewModel.getData()
             }
+            .searchable(text: $countriesViewModel.searchText)
         }
     }
 }
 
 #Preview {
-    ContentView()
+    HomeScreenView()
 }
