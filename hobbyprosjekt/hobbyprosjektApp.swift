@@ -13,7 +13,7 @@ struct hobbyprosjektApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeScreenView()
         }
     }
 }
