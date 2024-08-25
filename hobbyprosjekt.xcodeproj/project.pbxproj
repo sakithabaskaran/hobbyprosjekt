@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		014B194A2C78AAF900FDE51D /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014B19492C78AAF900FDE51D /* CountriesViewModel.swift */; };
+		014B194C2C7B855300FDE51D /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014B194B2C7B855300FDE51D /* BottomBar.swift */; };
 		01860FAF2C482FF9004B1EAD /* hobbyprosjektApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01860FAE2C482FF9004B1EAD /* hobbyprosjektApp.swift */; };
 		01860FB12C482FF9004B1EAD /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01860FB02C482FF9004B1EAD /* HomeScreenView.swift */; };
 		01860FB52C482FFB004B1EAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01860FB42C482FFB004B1EAD /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		014B19492C78AAF900FDE51D /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
+		014B194B2C7B855300FDE51D /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
 		01860FAB2C482FF9004B1EAD /* hobbyprosjekt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hobbyprosjekt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01860FAE2C482FF9004B1EAD /* hobbyprosjektApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hobbyprosjektApp.swift; sourceTree = "<group>"; };
 		01860FB02C482FF9004B1EAD /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 		01860FA22C482FF9004B1EAD = {
 			isa = PBXGroup;
 			children = (
+				014B194B2C7B855300FDE51D /* BottomBar.swift */,
 				01860FAD2C482FF9004B1EAD /* hobbyprosjekt */,
 				01860FAC2C482FF9004B1EAD /* Products */,
 			);
@@ -201,6 +204,7 @@
 				01860FB12C482FF9004B1EAD /* HomeScreenView.swift in Sources */,
 				01860FAF2C482FF9004B1EAD /* hobbyprosjektApp.swift in Sources */,
 				014B194A2C78AAF900FDE51D /* CountriesViewModel.swift in Sources */,
+				014B194C2C7B855300FDE51D /* BottomBar.swift in Sources */,
 				01860FCA2C514B42004B1EAD /* Country.swift in Sources */,
 				01860FC82C51469B004B1EAD /* Constants.swift in Sources */,
 			);
