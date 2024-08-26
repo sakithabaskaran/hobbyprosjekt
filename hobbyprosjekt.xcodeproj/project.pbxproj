@@ -45,7 +45,6 @@
 		01860FA22C482FF9004B1EAD = {
 			isa = PBXGroup;
 			children = (
-				014B194B2C7B855300FDE51D /* BottomBar.swift */,
 				01860FAD2C482FF9004B1EAD /* hobbyprosjekt */,
 				01860FAC2C482FF9004B1EAD /* Products */,
 			);
@@ -69,6 +68,7 @@
 				01860FC52C5143C0004B1EAD /* Controller */,
 				01860FC62C514570004B1EAD /* Supporting */,
 				01860FAE2C482FF9004B1EAD /* hobbyprosjektApp.swift */,
+				014B194B2C7B855300FDE51D /* BottomBar.swift */,
 				01860FB02C482FF9004B1EAD /* HomeScreenView.swift */,
 				01860FB62C482FFB004B1EAD /* Preview Content */,
 			);
