@@ -11,25 +11,63 @@ import SwiftData
 struct HomeScreenView: View {
     @StateObject var countriesViewModel = CountriesViewModel()
     var body: some View {
-        NavigationView {
-        
-            List {
-                ForEach(countriesViewModel.filterCountries, id: \.self) { country in
-                    HStack {
-                        Text(country.name.common)
-                        Text(country.flag)
+        TabView {
+            NavigationView {
+                List {
+                    ForEach(countriesViewModel.filterCountries, id: \.self) { country in
+                        HStack {
+                            Text(country.name.common)
+                            Text(country.flag)
+                        }
+                        .padding(3)
                     }
-                    .padding(3) 
                 }
+                .navigationTitle("Countries")
+                .onAppear {
+                    countriesViewModel.getData()
+                }
+                .searchable(text: $countriesViewModel.searchText)
             }
-            .navigationTitle("Countries")
-            .onAppear {
-                countriesViewModel.getData()
+            .tabItem {
+                Label("Home", systemImage: "house")
             }
-            .searchable(text: $countriesViewModel.searchText)
+            ScrapbookView()
+                .tabItem {
+                    Label("Map", systemImage: "map")
+                }
+            SettingsView()
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
         }
     }
 }
+
+
+struct ScrapbookView: View {
+    var body: some View {
+        NavigationView {
+            Text("Scrapbook")
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
+                .tabItem {
+                    Label("Map", systemImage: "map")
+                }
+        }
+    }
+}
+    
+struct SettingsView: View {
+    var body: some View {
+        NavigationView {
+            Text("Settings")
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
+        }
+    }
+}
+
 
 #Preview {
     HomeScreenView()
