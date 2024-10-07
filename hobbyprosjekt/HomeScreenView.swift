@@ -43,32 +43,6 @@ struct HomeScreenView: View {
     }
 }
 
-
-struct ScrapbookView: View {
-    var body: some View {
-        NavigationView {
-            Text("Scrapbook")
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
-                .tabItem {
-                    Label("Map", systemImage: "map")
-                }
-        }
-    }
-}
-    
-struct SettingsView: View {
-    var body: some View {
-        NavigationView {
-            Text("Settings")
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
-                .tabItem {
-                    Label("Settings", systemImage: "gear")
-                }
-        }
-    }
-}
-
-
 #Preview {
     HomeScreenView()
 }
