@@ -10,6 +10,8 @@ import UIKit
 import SwiftData
 
 struct ScrapbookView: View {
+    @EnvironmentObject var settingsViewModel: SettingsViewModel // Henter miljøobjektet
+    
     var body: some View {
         NavigationView {
             Text("Scrapbook")
@@ -20,3 +22,7 @@ struct ScrapbookView: View {
         }
     }
 }
+#Preview {
+    ScrapbookView()
+}
+

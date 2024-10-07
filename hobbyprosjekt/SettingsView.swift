@@ -1,47 +1,49 @@
-//
-//  SettingsView.swift
-//  hobbyprosjekt
-//
-//  Created by Sakitha Baskaran on 05/09/2024.
-//
-
 import SwiftUI
-import UIKit
-import SwiftData
 
 struct SettingsView: View {
+    @ObservedObject var settingsViewModel: SettingsViewModel // Mottar ViewModel
+
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text("General")) {
-                    Label("About", systemImage: "info.circle")
-                    Label("Wi-Fi", systemImage: "wifi")
+                    NavigationLink(destination: AboutView()) {
+                        Label("About", systemImage: "info.circle")
+                    }
+                    NavigationLink(destination: WiFiView()) {
+                        Label("Wi-Fi", systemImage: "wifi")
+                    }
                 }
                 
                 Section(header: Text("Display")) {
-                    Toggle(isOn: /*@START_MENU_TOKEN@*/.constant(true)/*@END_MENU_TOKEN@*/, label: {
-                        Text("Dark Mode")
-                    })
-                    Toggle(isOn: /*@START_MENU_TOKEN@*/.constant(true)/*@END_MENU_TOKEN@*/, label: {
+                    Toggle(isOn: $settingsViewModel.showFlags) {
                         Text("Remove flags")
-                    })
+                    }
+                    Toggle(isOn: $settingsViewModel.isDarkMode) {
+                        Text("Dark Mode")
+                    }
                     Text("Change languages")
-                    Text("Font sizing")
+                    Picker("Select Language", selection: $settingsViewModel.selectedLanguage) {
+                        ForEach(settingsViewModel.languages, id: \.self) { language in
+                            Text(language).tag(language)
+                        }
+                    }
+                    Text("Font Size: \(Int(settingsViewModel.fontSize))") // Visning av nåværende fontstørrelse
+                    Slider(value: $settingsViewModel.fontSize, in: 10...30, step: 1) // Slider for å justere fontstørrelse
                 }
-                
+
                 Section(header: Text("Notifications"),
                         footer: Text("With shared location, you can get personalized notifications based on your position.")) {
-                    Toggle(isOn: /*@START_MENU_TOKEN@*/.constant(true)/*@END_MENU_TOKEN@*/, label: {
+                    Toggle(isOn: $settingsViewModel.shareLocation) { // Toggle for å dele posisjon
                         Text("Share location")
-                    })
+                    }
                 }
             }
             .navigationTitle("Settings")
         }
-        
     }
 }
 
 #Preview {
-    SettingsView()
+    SettingsView(settingsViewModel: SettingsViewModel()) // Passer ViewModel til preview
 }

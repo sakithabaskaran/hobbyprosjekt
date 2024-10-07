@@ -17,6 +17,12 @@
 		01860FC82C51469B004B1EAD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01860FC72C51469B004B1EAD /* Constants.swift */; };
 		01860FCA2C514B42004B1EAD /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01860FC92C514B41004B1EAD /* Country.swift */; };
 		01860FCE2C515A57004B1EAD /* RESTCountries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01860FCD2C515A56004B1EAD /* RESTCountries.swift */; };
+		14D5856E2CB44BEA00F3901E /* WiFi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D5856D2CB44BDE00F3901E /* WiFi.swift */; };
+		14D5857C2CB46F2E00F3901E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D5857B2CB46F2500F3901E /* Location.swift */; };
+		14D585822CB4735700F3901E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14D585802CB4735700F3901E /* Localizable.strings */; };
+		14FCFC492CB438910016651B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FCFC482CB438890016651B /* SettingsViewModel.swift */; };
+		14FCFC4B2CB43A4D0016651B /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FCFC4A2CB43A440016651B /* AboutView.swift */; };
+		14FCFC4D2CB442670016651B /* WiFiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FCFC4C2CB442600016651B /* WiFiView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +37,14 @@
 		01860FC72C51469B004B1EAD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		01860FC92C514B41004B1EAD /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		01860FCD2C515A56004B1EAD /* RESTCountries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTCountries.swift; sourceTree = "<group>"; };
+		14D5856D2CB44BDE00F3901E /* WiFi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFi.swift; sourceTree = "<group>"; };
+		14D5857B2CB46F2500F3901E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		14D585812CB4735700F3901E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		14D585832CB4737500F3901E /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		14D585842CB4737700F3901E /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		14FCFC482CB438890016651B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		14FCFC4A2CB43A440016651B /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		14FCFC4C2CB442600016651B /* WiFiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +87,10 @@
 				01860FB02C482FF9004B1EAD /* HomeScreenView.swift */,
 				014B194D2C89C14A00FDE51D /* SettingsView.swift */,
 				014B194F2C89C2BE00FDE51D /* ScrapbookView.swift */,
+				14FCFC4A2CB43A440016651B /* AboutView.swift */,
+				14FCFC4C2CB442600016651B /* WiFiView.swift */,
 				01860FB62C482FFB004B1EAD /* Preview Content */,
+				14D585802CB4735700F3901E /* Localizable.strings */,
 			);
 			path = hobbyprosjekt;
 			sourceTree = "<group>";
@@ -90,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				01860FC92C514B41004B1EAD /* Country.swift */,
+				14D5857B2CB46F2500F3901E /* Location.swift */,
+				14D5856D2CB44BDE00F3901E /* WiFi.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				014B19492C78AAF900FDE51D /* CountriesViewModel.swift */,
+				14FCFC482CB438890016651B /* SettingsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -175,6 +195,8 @@
 			knownRegions = (
 				en,
 				Base,
+				nb,
+				sv,
 			);
 			mainGroup = 01860FA22C482FF9004B1EAD;
 			productRefGroup = 01860FAC2C482FF9004B1EAD /* Products */;
@@ -192,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01860FB82C482FFB004B1EAD /* Preview Assets.xcassets in Resources */,
+				14D585822CB4735700F3901E /* Localizable.strings in Resources */,
 				01860FB52C482FFB004B1EAD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,15 +229,33 @@
 				014B194E2C89C14A00FDE51D /* SettingsView.swift in Sources */,
 				01860FCE2C515A57004B1EAD /* RESTCountries.swift in Sources */,
 				01860FB12C482FF9004B1EAD /* HomeScreenView.swift in Sources */,
+				14FCFC4D2CB442670016651B /* WiFiView.swift in Sources */,
+				14D5856E2CB44BEA00F3901E /* WiFi.swift in Sources */,
+				14D5857C2CB46F2E00F3901E /* Location.swift in Sources */,
 				01860FAF2C482FF9004B1EAD /* hobbyprosjektApp.swift in Sources */,
+				14FCFC4B2CB43A4D0016651B /* AboutView.swift in Sources */,
 				014B194A2C78AAF900FDE51D /* CountriesViewModel.swift in Sources */,
 				014B19502C89C2BE00FDE51D /* ScrapbookView.swift in Sources */,
 				01860FCA2C514B42004B1EAD /* Country.swift in Sources */,
 				01860FC82C51469B004B1EAD /* Constants.swift in Sources */,
+				14FCFC492CB438910016651B /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		14D585802CB4735700F3901E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14D585812CB4735700F3901E /* en */,
+				14D585832CB4737500F3901E /* nb */,
+				14D585842CB4737700F3901E /* sv */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		01860FB92C482FFB004B1EAD /* Debug */ = {
