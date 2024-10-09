@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,7 +17,18 @@
 		01860FCE2C515A57004B1EAD /* RESTCountries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01860FCD2C515A56004B1EAD /* RESTCountries.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		011E015F2CB71DDC00EA42DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01860FA32C482FF9004B1EAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01860FAA2C482FF9004B1EAD;
+			remoteInfo = hobbyprosjekt;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		011E015B2CB71DDC00EA42DC /* hobbyprosjektTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hobbyprosjektTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		014B19492C78AAF900FDE51D /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
 		01860FAB2C482FF9004B1EAD /* hobbyprosjekt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hobbyprosjekt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01860FAE2C482FF9004B1EAD /* hobbyprosjektApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hobbyprosjektApp.swift; sourceTree = "<group>"; };
@@ -29,7 +40,18 @@
 		01860FCD2C515A56004B1EAD /* RESTCountries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTCountries.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		011E015C2CB71DDC00EA42DC /* hobbyprosjektTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = hobbyprosjektTests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		011E01582CB71DDC00EA42DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		01860FA82C482FF9004B1EAD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				01860FAD2C482FF9004B1EAD /* hobbyprosjekt */,
+				011E015C2CB71DDC00EA42DC /* hobbyprosjektTests */,
 				01860FAC2C482FF9004B1EAD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				01860FAB2C482FF9004B1EAD /* hobbyprosjekt.app */,
+				011E015B2CB71DDC00EA42DC /* hobbyprosjektTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +154,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		011E015A2CB71DDC00EA42DC /* hobbyprosjektTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 011E01612CB71DDC00EA42DC /* Build configuration list for PBXNativeTarget "hobbyprosjektTests" */;
+			buildPhases = (
+				011E01572CB71DDC00EA42DC /* Sources */,
+				011E01582CB71DDC00EA42DC /* Frameworks */,
+				011E01592CB71DDC00EA42DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				011E01602CB71DDC00EA42DC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				011E015C2CB71DDC00EA42DC /* hobbyprosjektTests */,
+			);
+			name = hobbyprosjektTests;
+			packageProductDependencies = (
+			);
+			productName = hobbyprosjektTests;
+			productReference = 011E015B2CB71DDC00EA42DC /* hobbyprosjektTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		01860FAA2C482FF9004B1EAD /* hobbyprosjekt */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01860FBB2C482FFB004B1EAD /* Build configuration list for PBXNativeTarget "hobbyprosjekt" */;
@@ -154,9 +201,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
+				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					011E015A2CB71DDC00EA42DC = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 01860FAA2C482FF9004B1EAD;
+					};
 					01860FAA2C482FF9004B1EAD = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -176,11 +227,19 @@
 			projectRoot = "";
 			targets = (
 				01860FAA2C482FF9004B1EAD /* hobbyprosjekt */,
+				011E015A2CB71DDC00EA42DC /* hobbyprosjektTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		011E01592CB71DDC00EA42DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		01860FA92C482FF9004B1EAD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -193,6 +252,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		011E01572CB71DDC00EA42DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		01860FA72C482FF9004B1EAD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -208,7 +274,53 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		011E01602CB71DDC00EA42DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01860FAA2C482FF9004B1EAD /* hobbyprosjekt */;
+			targetProxy = 011E015F2CB71DDC00EA42DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		011E01622CB71DDC00EA42DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8AB37ZZ823;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sakitha.hobbyprosjektTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hobbyprosjekt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/hobbyprosjekt";
+			};
+			name = Debug;
+		};
+		011E01632CB71DDC00EA42DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8AB37ZZ823;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sakitha.hobbyprosjektTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hobbyprosjekt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/hobbyprosjekt";
+			};
+			name = Release;
+		};
 		01860FB92C482FFB004B1EAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -389,6 +501,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		011E01612CB71DDC00EA42DC /* Build configuration list for PBXNativeTarget "hobbyprosjektTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				011E01622CB71DDC00EA42DC /* Debug */,
+				011E01632CB71DDC00EA42DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		01860FA62C482FF9004B1EAD /* Build configuration list for PBXProject "hobbyprosjekt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

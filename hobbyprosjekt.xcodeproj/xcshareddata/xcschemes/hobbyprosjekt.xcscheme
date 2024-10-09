@@ -29,6 +29,30 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "011E015A2CB71DDC00EA42DC"
+               BuildableName = "hobbyprosjektTests.xctest"
+               BlueprintName = "hobbyprosjektTests"
+               ReferencedContainer = "container:hobbyprosjekt.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "011E016F2CB7220100EA42DC"
+               BuildableName = "hobbyprosjektUITests.xctest"
+               BlueprintName = "hobbyprosjektUITests"
+               ReferencedContainer = "container:hobbyprosjekt.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
