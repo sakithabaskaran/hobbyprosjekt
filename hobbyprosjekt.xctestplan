@@ -1,0 +1,35 @@
+{
+  "configurations" : [
+    {
+      "id" : "217C0131-7AE2-4F44-8401-04541A8F0305",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "environmentVariableEntries" : [
+      {
+        "key" : "IDEPreferLogStreaming",
+        "value" : "YES"
+      }
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:hobbyprosjekt.xcodeproj",
+      "identifier" : "01860FAA2C482FF9004B1EAD",
+      "name" : "hobbyprosjekt"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:hobbyprosjekt.xcodeproj",
+        "identifier" : "011E015A2CB71DDC00EA42DC",
+        "name" : "hobbyprosjektTests"
+      }
+    }
+  ],
+  "version" : 1
+}
