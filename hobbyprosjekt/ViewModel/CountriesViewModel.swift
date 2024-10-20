@@ -12,8 +12,10 @@ class CountriesViewModel: ObservableObject {
     @Published var countries: [Country] = []
     @Published var searchText: String = ""
     
+    let getCountries = GetCountriesFromAPI()
+    
     func getData() {
-        fetch(countriesViewModel: self)
+        getCountries.fetch(countriesViewModel: self)
     
     }
     
@@ -23,13 +25,16 @@ class CountriesViewModel: ObservableObject {
             country.name.common.lowercased().contains(searchText.lowercased())
         }
     }
-     
+    
+    /*
     func CountryList() -> [String] {
         var nameList: [String] = []
         countries.forEach { land in
             nameList.append(land.name.common)
+            // print(countries)
         }
+        print(nameList)
         return nameList
-    }
+    }*/
     
 }
